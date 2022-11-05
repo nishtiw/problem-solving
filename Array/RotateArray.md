@@ -3,31 +3,33 @@
 - [Solution](https://www.youtube.com/watch?v=PgC0cOA_Ylg&ab_channel=CodeIn10-NishantChahar)
 
 ## My Solution 
-- Throws RunTime error
 ```
 class Solution
 {
     //Function to rotate an array by d elements in counter-clockwise direction. 
+
     static void rotateArr(int arr[], int d, int n)
+
     {
+
         // add your code here
+        d = d%n;
         int a2[] = arr.clone();
         int d2 = d;
-
         int i=0;
-        while(d2 != n) {
+        while(d2!=n) {
             arr[i] = a2[d2];
             i++;
             d2++;
         }
-
         int j=0;
-        while(j != d) {
+        while(j!=d) {
             arr[i] = a2[j];
             i++;
             j++;
         }
     }
+
 }
 ```
 
